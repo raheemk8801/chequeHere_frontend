@@ -1,0 +1,7 @@
+New-Item src\assets\.gitkeep
+New-Item src\components\.gitkeep
+New-Item src\context\.gitkeep
+New-Item src\hooks\.gitkeep
+New-Item src\pages\.gitkeep
+New-Item src\router\.gitkeep
+New-Item src\utils\.gitkeep
