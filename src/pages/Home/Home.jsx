@@ -35,6 +35,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <h1>Home</h1>
       <UserButton />
       <p>User ID: {user?.id}</p>
       <p>Email: {user?.primaryEmailAddress?.emailAddress}</p>
