@@ -6,6 +6,8 @@ import PaymentCalendar from "../pages/PaymentCalendar/PaymentCalendar";
 import Payroll from "../pages/Payroll/Payroll";
 import Employees from "../pages/Employees/Employees";
 import Profiles from "../pages/Profiles/Profiles";
+import Suppliers from "../pages/Suppliers/Suppliers";
+import Liability from "../pages/Liability/Liability";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
@@ -19,6 +21,8 @@ const router = createBrowserRouter([
       { path: "/payroll", element: <Payroll /> },
       { path: "/employees", element: <Employees /> },
       { path: "/profiles", element: <Profiles /> },
+       { path: "/suppliers", element: <Suppliers /> },
+        { path: "/liability", element: <Liability /> },
       { path: "/", element: <Home /> }, // default route
     ],
   },
