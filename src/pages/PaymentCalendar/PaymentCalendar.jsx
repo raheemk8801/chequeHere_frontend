@@ -119,7 +119,7 @@ const PaymentCalendar = () => {
 
   return (
     <div className="payment-calendar-page">
-      <Header title="Payment Calendar" />
+      <Header title="Payment Calender" />
 
       <div className="payment-calendar-toolbar">
         <div className="payment-calendar-toolbar-left">
