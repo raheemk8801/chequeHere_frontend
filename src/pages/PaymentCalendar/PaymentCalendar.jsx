@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 const PaymentCalendar = () => {
   return (
     <>
-      <Header title="Payment Caleneder" />
+      <Header title="Payment Calender" />
     </>
   );
 };
