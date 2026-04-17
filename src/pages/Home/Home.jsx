@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { UserButton, useAuth, useUser } from "@clerk/clerk-react";
+import {  useAuth, useUser } from "@clerk/clerk-react";
 import Header from "../../components/Header/Header";
 
 export default function HomePage() {
@@ -37,9 +37,8 @@ export default function HomePage() {
   return (
     <div>
       <Header title="Home" />
-      <UserButton />
-      <p>User ID: {user?.id}</p>
-      <p>Email: {user?.primaryEmailAddress?.emailAddress}</p>
+      {/* <p>User ID: {user?.id}</p>
+      <p>Email: {user?.primaryEmailAddress?.emailAddress}</p> */}
     </div>
   );
 }
