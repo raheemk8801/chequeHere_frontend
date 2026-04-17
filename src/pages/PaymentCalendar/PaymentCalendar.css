@@ -1,0 +1,268 @@
+.payment-calendar-page {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.payment-calendar-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.payment-calendar-toolbar-left,
+.payment-calendar-toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.payment-calendar-year-select {
+    min-width: 100px;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid #d9dfeb;
+    border-radius: 999px;
+    outline: none;
+    background: #4d6cf0;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.payment-calendar-search-box input {
+    width: 250px;
+    height: 42px;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    padding: 0 16px;
+    outline: none;
+    background: #fff;
+    color: #111827;
+    caret-color: #111827;
+    font-size: 14px;
+}
+
+.payment-calendar-add-btn {
+    height: 50px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 999px;
+    background: #4d6cf0;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-icon-img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.payment-calendar-search-box input::placeholder {
+    color: #9ca3af;
+}
+
+.payment-calendar-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 22px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.payment-calendar-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.payment-calendar-month-nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.payment-calendar-month-nav h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #111827;
+}
+
+.month-nav-btn {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    color: #4d6cf0;
+    line-height: 1;
+}
+
+.payment-calendar-legend {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-item p {
+    margin: 0;
+    font-size: 12px;
+    color: #6b7280;
+    text-transform: lowercase;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.legend-dot.received {
+    background: #bdf2df;
+}
+
+.legend-dot.not-received {
+    background: #f6c9cb;
+}
+
+.legend-dot.on-hold {
+    background: #f6e59f;
+}
+
+.legend-dot.pending {
+    background: #cdd9ff;
+}
+
+.payment-calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.weekday-cell {
+    text-align: center;
+    font-weight: 600;
+    color: #374151;
+    padding: 10px 0;
+}
+
+.payment-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-day-cell {
+    min-height: 120px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 8px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.empty-cell {
+    background: #f9fafb;
+}
+
+.calendar-day-number {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.calendar-day-events {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.calendar-event {
+    padding: 5px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    color: #374151;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.calendar-event.received {
+    background: #bdf2df;
+}
+
+.calendar-event.not-received {
+    background: #f6c9cb;
+}
+
+.calendar-event.on-hold {
+    background: #f6e59f;
+}
+
+.calendar-event.pending {
+    background: #cdd9ff;
+}
+
+.calendar-total-text {
+    margin: 6px 0 0;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+@media (max-width: 1100px) {
+    .payment-calendar-search-box input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .payment-calendar-grid,
+    .payment-calendar-weekdays {
+        min-width: 800px;
+    }
+
+    .payment-calendar-card {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .payment-calendar-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .payment-calendar-toolbar-left,
+    .payment-calendar-toolbar-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .payment-calendar-search-box {
+        flex: 1;
+    }
+
+    .payment-calendar-search-box input {
+        width: 100%;
+    }
+}
