@@ -1,1 +1,8 @@
-const Employees = () => <h1>Employees Page</h1>; export default Employees
+import Header from "../../components/Header/Header";
+const Employees = () => {
+    return ( 
+    <>
+    <Header title="Employees" />
+    </>
+)};
+export default Employees;

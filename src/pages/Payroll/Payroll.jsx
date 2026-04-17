@@ -1,1 +1,11 @@
-const Payroll = () => <h1>Payroll Page</h1>; export default Payroll
+import Header from "../../components/Header/Header";
+
+const Payroll = () => {
+  return (
+    <>
+      <Header title="Payroll" />
+    </>
+  );
+};
+
+export default Payroll;

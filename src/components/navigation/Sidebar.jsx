@@ -5,10 +5,12 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  IconButton,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
-// 🔹 Import your icons
+// Icons
 import dashboardIcon from "../../assets/Icons/fi-sr-apps.png";
 import salesIcon from "../../assets/Icons/fi-sr-dollar.png";
 import payrollIcon from "../../assets/Icons/fi-sr-dollar.png";
@@ -17,7 +19,6 @@ import employeeIcon from "../../assets/Icons/Group 35.png";
 import profileIcon from "../../assets/Icons/fi-sr-apps-delete.png";
 import supplierIcon from "../../assets/Icons/fi-sr-shopping-cart-add.png";
 
-// 🔹 Import logo
 import logo from "../../assets/Icons/logo.png";
 
 const Sidebar = () => {
@@ -46,28 +47,26 @@ const Sidebar = () => {
           background: "#0E1F5E",
           color: "#fff",
           minHeight: "100vh",
-          transition: "width 0.3s",
+          transition: "width 0.3s ease",
+          overflow: "hidden",
         }}
       >
-        {/* 🔹 Logo */}
+        {/* 🔹 Top Section */}
         <Box
           sx={{
             display: "flex",
-            justifyContent: "center",
             alignItems: "center",
+            justifyContent: open ? "space-between" : "center",
             p: 2,
           }}
         >
-          <img
-            src={logo}
-            alt="logo"
-            style={{
-              width: open ? 120 : 40,
-              transition: "0.3s",
-              cursor: "pointer",
-            }}
-            onClick={() => setOpen(!open)} // toggle sidebar
-          />
+          {open && (
+            <img src={logo} alt="logo" style={{ width: 80 }} />
+          )}
+
+          <IconButton onClick={() => setOpen(!open)}>
+            <MenuIcon sx={{ color: "#fff" }} />
+          </IconButton>
         </Box>
 
         {/* 🔹 Menu */}
@@ -82,14 +81,16 @@ const Sidebar = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
+                    justifyContent: open ? "flex-start" : "left",
                     gap: 2,
-                    px: 2,
-                    py: 1.2,
+                    py: 1.5,
+                    mx: open ? 1 : "auto",
                     backgroundColor: isActive ? "#F1B657" : "transparent",
-                    borderRadius: 10
+                    borderRadius: "12px",
+                    transition: "all 0.3s",
                   }}
                 >
-                  {/* 🔹 Icon */}
+                  {/* Icon */}
                   <Box
                     component="img"
                     src={item.icon}
@@ -103,18 +104,20 @@ const Sidebar = () => {
                     }}
                   />
 
-                  {/* 🔹 Text */}
-                  {open && (
-                    <ListItemText
-                      primary={item.name}
-                      sx={{
+                  {/* Text */}
+                  <ListItemText
+                    primary={item.name}
+                    sx={{
+                      opacity: open ? 1 : 0,
+                      transition: "opacity 0.2s ease",
+                      whiteSpace: "nowrap",
+                      "& .MuiTypography-root": {
+                        fontSize: "13px",
+                        fontWeight: 500,
                         color: isActive ? "#000" : "#fff",
-                        "&:hover": {
-                          color: "#F1B657",
-                        },
-                      }}
-                    />
-                  )}
+                      },
+                    }}
+                  />
                 </ListItemButton>
               </ListItem>
             );

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { UserButton, useAuth, useUser } from "@clerk/clerk-react";
+import Header from "../../components/Header/Header";
 
 export default function HomePage() {
   const { getToken } = useAuth();
@@ -35,7 +36,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1>Home</h1>
+      <Header title="Home" />
       <UserButton />
       <p>User ID: {user?.id}</p>
       <p>Email: {user?.primaryEmailAddress?.emailAddress}</p>

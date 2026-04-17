@@ -1,1 +1,11 @@
-const DailySales = () => <h1>Daily Sales Page</h1>; export default DailySales
+import Header from "../../components/Header/Header";
+
+const DailySales = () => {
+  return (
+    <>
+      <Header title="Daily Sales" />
+    </>
+  );
+};
+
+export default DailySales;

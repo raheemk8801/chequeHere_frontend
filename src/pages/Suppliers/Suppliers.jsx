@@ -1,1 +1,11 @@
-const Suppliers = () => <h1>Suppliers Page</h1>; export default Suppliers
+import Header from "../../components/Header/Header";
+
+const Suppliers = () => {
+  return (
+    <>
+      <Header title="Suppliers" />
+    </>
+  );
+};
+
+export default Suppliers;

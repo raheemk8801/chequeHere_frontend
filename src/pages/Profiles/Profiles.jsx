@@ -1,1 +1,11 @@
-const Profiles = () => <h1>Profiles Page</h1>; export default Profiles
+import Header from "../../components/Header/Header";
+
+const Profiles = () => {
+  return (
+    <>
+      <Header title="Profile" />
+    </>
+  );
+};
+
+export default Profiles;

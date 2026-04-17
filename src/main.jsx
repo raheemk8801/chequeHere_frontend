@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { ThemeProvider } from "@mui/material/styles"; // 🔥 add this
 import App from "./App.jsx";
 import "./index.css";
+import theme from "./theme"; // 🔥 import your theme
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -25,9 +27,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         },
       }}
     >
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      {/* 🔥 Wrap here */}
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
     </ClerkProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

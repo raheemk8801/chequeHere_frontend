@@ -1,1 +1,11 @@
-const Liability = () => <h1>Liability Page</h1>; export default Liability
+import Header from "../../components/Header/Header";
+
+const Liability = () => {
+  return (
+    <>
+      <Header title="Liability" />
+    </>
+  );
+};
+
+export default Liability;
