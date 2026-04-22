@@ -10,6 +10,10 @@ import Suppliers from "../pages/Suppliers/Suppliers";
 import Liability from "../pages/Liability/Liability";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
+import AddEmployee from "../pages/Employees/AddEmployee";
+import AddExpense from "../pages/AddExpense";
+
+
 const router = createBrowserRouter([
   {
     element: <Sidebar />, 
@@ -23,6 +27,8 @@ const router = createBrowserRouter([
       { path: "/profiles", element: <Profiles /> },
        { path: "/suppliers", element: <Suppliers /> },
         { path: "/liability", element: <Liability /> },
+        {path: "/employees", element: <AddEmployee />},
+        {path: "/daily-sales", element: <AddExpense/>},
       { path: "/", element: <Home /> }, // default route
     ],
   },
