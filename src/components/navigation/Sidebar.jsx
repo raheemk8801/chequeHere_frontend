@@ -10,6 +10,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 
+
 // Icons
 import dashboardIcon from "../../assets/Icons/fi-sr-apps.png";
 import salesIcon from "../../assets/Icons/fi-sr-dollar.png";
